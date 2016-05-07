@@ -2,10 +2,16 @@ class XigniteApiService
 	include HTTParty
 
 	def get_manager(name)
-		get('xHoldings.json/LookupManager', { :Name => name})
+		get('xHoldings.json/LookupManager', { :Name => name })
 	end
 
+	def get_latest_holdings(cik)
+		get('xHoldings.json/GetLatestHoldings', { :ManagerCIK => cik })
+	end
 
+	def get_latest_holders(type, identifier)
+		get('xHoldings.json/GetLatestHolders', { :IdentifierType => type, :Identifier => identifier })
+	end
 
 	private
 
