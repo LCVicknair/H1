@@ -1,0 +1,26 @@
+<div class="container">
+  <h1><%="#{@manager.name}'s"%> Holdings</h1>
+  <p>Latest 13f Holdings</p>            
+  <table class="table table-hover">
+    <thead>
+      <tr class="info">
+        <th>Symbol</th>
+        <th>Value</th>
+        <th>Shares</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+
+    <% @holdings.each do |holding| %>
+      <tr class="info">
+          <td><%= holding.symbol %></td>
+          <td>$<%= holding.value %></td>
+          <td><%= holding.shares %></td>
+      </tr>
+     <% end %>
+    
+    </tbody>
+  </table>
+</div>
