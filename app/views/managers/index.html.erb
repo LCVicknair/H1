@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Managers</h1>
+  <p>Active Fun Magers</p>            
+  <table class="table table-hover">
+    <thead>
+      <tr class="info">
+        <th>Manager</th>
+        <th>CIK</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+
+    <% @managers.each do |manager| %>
+      <tr class="info">
+          <td><%= link_to manager.name, manager_path(manager) %></td>
+          <td><%= link_to manager.cik, manager_path(manager) %></td>
+      </tr>
+     <% end %>
+    
+    </tbody>
+  </table>
+</div>

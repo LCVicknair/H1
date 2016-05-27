@@ -1,0 +1,27 @@
+
+
+
+<div class="container">
+  <h1>Followed Managers</h1>
+  <p>This is the information on the Funds you follow</p>            
+  <table class="table table-hover">
+    <thead>
+      <tr class="info">
+        <th>Manager</th>
+        <th>CIK</th>
+      </tr>
+    </thead>
+
+
+    <tbody>
+
+    <% @managers.each do |manager| %>
+      <tr class="info">
+          <td><%= link_to manager.name, manager_path(person) %></td>
+          <td><%= link_to manager.cik, manager_path(person) %></td>
+      </tr>
+     <% end %>
+    
+    </tbody>
+  </table>
+</div>
