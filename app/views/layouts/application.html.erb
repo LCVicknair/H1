@@ -48,8 +48,8 @@
       </form> -->
 
       <div class="navbar-form navbar-left" role="search">
-          <%= form_tag(manager_path, :method => 'get', class: 'input-group', id:'search-form')  do %>
-            <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Enter CIK' %>
+          <%= form_tag managers_path, :method => 'get', class: 'input-group', id:'search-form' do %>
+            <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Enter CIK or Name' %>
             <span class="input-group-btn">
               <%= submit_tag "search", class: "btn btn-default", id:"searchbutton" %>
             </span>
