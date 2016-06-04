@@ -25,7 +25,10 @@
       <ul class="nav navbar-nav">
         <%= link_to "Home", root_path, class: "navbar-brand" %>
 
-        <li><a href="#">Link</a></li>
+
+        <%= link_to "My Page", user_path(current_user), class: "navbar-brand" %>
+
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -48,8 +51,8 @@
       </form> -->
 
       <div class="navbar-form navbar-left" role="search">
-          <%= form_tag(manager_path, :method => 'get', class: 'input-group', id:'search-form')  do %>
-            <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Enter CIK' %>
+          <%= form_tag managers_path, :method => 'get', class: 'input-group', id:'search-form' do %>
+            <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Enter CIK or Name' %>
             <span class="input-group-btn">
               <%= submit_tag "search", class: "btn btn-default", id:"searchbutton" %>
             </span>
@@ -86,7 +89,7 @@
 		<footer id="footer">
 		<p class="navbar-text pull-left">&copy; 2016 Powered by Uncle Bill & LV</span></p>
 
-			<a href="#" class="navbar-text pull-right">Back to top</a>
+			<a href="#top" class="navbar-text pull-right">Back to top</a>
 			<a href="#" class="navbar-text pull-right">Contact Us</a>
 			<a href="#" class="navbar-text pull-right">About Us</a>
 			
