@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_action :authenticate_user!
 
   def show
   	@user = User.find(params[:id])
@@ -14,6 +15,15 @@ class UsersController < ApplicationController
 			fetch
 		end
 	end
+
+	def home
+	  if current_user
+	    @user = current_user.managers
+	    render :private_home
+	  else
+	    render :public_home
+	  end
+end
 
 	private
 
