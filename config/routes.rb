@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :users
-  resources :funds
   resources :managers
   
   root 'welcome#index'

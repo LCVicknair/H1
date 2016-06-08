@@ -36,6 +36,10 @@
 
 <p align="center"> Do not see what you are looking for? Add the Manager below! </p>
 
-<%= form_tag do %>
-  Form contents
-<% end %>
+
+<div align="center">
+  <%= simple_form_for @new_manager do |f| %>
+    <%= f.input_field :cik ,placeholder: 'Enter full CIK' %>
+    <%= submit_tag("Add") %>
+  <% end %>
+</div>

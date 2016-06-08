@@ -31,6 +31,6 @@ class XigniteApiService
 		end
 
 		def api_token
-			ENV.fetch('XIGNITE_API_TOKEN')
+			'7314F556B56649D7ABAF73B98B7D533C' #ENV.fetch('XIGNITE_API_TOKEN')
 		end
 end

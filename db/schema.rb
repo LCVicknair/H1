@@ -11,16 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160521181545) do
+ActiveRecord::Schema.define(version: 20160607232754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "funds", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "holdings", force: :cascade do |t|
     t.string   "symbol"
@@ -37,6 +31,11 @@ ActiveRecord::Schema.define(version: 20160521181545) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+  end
+
+  create_table "managers_users", id: false, force: :cascade do |t|
+    t.integer "user_id",    null: false
+    t.integer "manager_id", null: false
   end
 
   create_table "users", force: :cascade do |t|
