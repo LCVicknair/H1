@@ -1,3 +1,9 @@
+<%= button_to user_path(current_user), :method => 'get' do %>
+  Add <%= @manager.name%> to portfolio!
+  <% @add_manager %>
+<% end %>
+
+
 <div class="container">
   <h1><%="#{@manager.name}'s"%> Holdings</h1>
   <p>Latest 13f Holdings</p>            
