@@ -1,4 +1,4 @@
-class HoldingsController < ActiveController
+class HoldingsController < ApplicationController
 	def show
 		@holding = Holding.find(params[:id])
 	end
