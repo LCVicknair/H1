@@ -16,6 +16,13 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def unfollow
+		current_user.managers.delete(params[:manager_id])
+
+		redirect_to user_path(current_user)
+  end
+
+
 	private
 
 		def user_params
