@@ -4,8 +4,9 @@ Rails.application.routes.draw do
 
   resources :users
   resources :managers
-  get'index' => 'welcome#sign_in_page'
+  
   get 'about' => 'about#index'
+  get 'contact' => 'contact#index'
   
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
