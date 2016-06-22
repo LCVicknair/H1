@@ -10,19 +10,15 @@
       </tr>
     </thead>
 
-
     <tbody>
 
-    <% @managers.each do |manager| %>
-      <tr class="info">
-          <td><%= link_to manager.name, manager_path(manager) %></td>
-          <td><%= link_to manager.cik, manager_path(manager) %></td>
-          <td><%= link_to 'Quit Following', manager_path %></td>
-                    <%%>
-                  <% end %>
-      </tr>
-     <% end %>
-    
+      <% @managers.each do |manager| %>
+        <tr class="info">
+            <td><%= link_to manager.name, manager_path(manager) %></td>
+            <td><%= link_to manager.cik, manager_path(manager) %></td>
+            <td><%= link_to 'Quit Following', manager_path %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>
