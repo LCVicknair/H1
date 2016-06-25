@@ -16,7 +16,8 @@
         <tr class="info">
             <td><%= link_to manager.name, manager_path(manager) %></td>
             <td><%= link_to manager.cik, manager_path(manager) %></td>
-            <td><%= link_to 'Quit Following', manager_path %></td>
+            <td><%= button_to unfollow_path(manager), :method => 'post', :params => { :manager_id => manager.id } do %>Quit Following</td>
+            <% end %>
         </tr>
       <% end %>
     </tbody>

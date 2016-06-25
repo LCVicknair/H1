@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :users
   resources :managers
+
+  post 'unfollow' => 'users#unfollow'
   
   get 'about' => 'about#index'
   get 'contact' => 'contact#index'
