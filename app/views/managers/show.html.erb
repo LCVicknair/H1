@@ -2,8 +2,10 @@
   <%= button_to add_path, :method => 'post', :params => { :id => @manager.id }  do %>
     Add <%= @manager.name %> to portfolio!
   <% end %>
+
 <% else %>
-<%= button_to unfollow_path, :method => 'post', :params => { :manager_id => @manager.id }  do %>
+
+  <%= button_to unfollow_path, :method => 'post', :params => { :manager_id => @manager.id }  do %>
     Remove <%= @manager.name %> from portfolio!
   <% end %>
 <% end %>
