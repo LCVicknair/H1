@@ -1,8 +1,8 @@
-
+<% if current_user.managers.exclude?(@manager)%>
   <%= button_to add_path, :method => 'post', :params => { :id => @manager.id }  do %>
-    Add <%= @manager.name%> to portfolio!
+    Add <%= @manager.name %> to portfolio!
   <% end %>
-
+<% end %>
 
 
 <div class="container">
