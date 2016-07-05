@@ -13,9 +13,15 @@ class ManagersController < ApplicationController
     @manager = Manager.find(params[:id])
     @holdings = Holding.all
     @holding = Holding.find(params[:id])
-    @list = current_user.managers
-    @add_manager = @list << @manager
+    
   end
+
+  def add
+    current_user.managers << Manager.find(params[:id])
+    
+    redirect_to user_path(current_user)
+  end
+
 
   def create
     service = XigniteRetrievalService.new
